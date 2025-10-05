@@ -12,7 +12,7 @@ First install it from [HERE](https://docs.nvidia.com/datacenter/cloud-native/con
 ## Install from Dockerhub (recommended)
 ```
 docker pull jakami/pwncrack-docker-nvidia:latest
-docker run -it --gpus all -v $HOME/.docker-data/pwncrack-docker:/app/data -e NVIDIA_VISIBLE_DEVICES=all -e NVIDIA_DRIVER_CAPABILITIES=all -e USERKEY="CHANGEME jakami/pwncrack-docker-nvidia:latest
+docker run -it --gpus all -v $HOME/.docker-data/pwncrack-docker-nvidia:/app/data -e NVIDIA_VISIBLE_DEVICES=all -e NVIDIA_DRIVER_CAPABILITIES=all -e USERKEY="CHANGEME" jakami/pwncrack-docker-nvidia:latest
 ```
 ## Docker Compose build and run
 ```
