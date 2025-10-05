@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  wpa-sec:
+    image: jakami/pwncrack-docker-nvidia:latest
+    stdin_open: true  # equivalent to -i
+    tty: true         # equivalent to -t
+    runtime: nvidia   # necessary for GPU support with Docker and NVIDIA
+    volumes:
+      - ~/.docker-data/pwncrack-docker-nvidia:/app/data
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - USERKEY=CHANGEME
